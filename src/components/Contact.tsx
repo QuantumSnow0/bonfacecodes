@@ -117,7 +117,7 @@ export default function Contact() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Whether you want to hire me or buy FreshBusket, reach out below. I'd
+            Have a project in mind? Let's discuss how I can help bring your ideas to life. I'd
             love to hear from you!
           </p>
         </motion.div>

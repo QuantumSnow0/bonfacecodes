@@ -8,38 +8,51 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://bonfacecodes.vercel.app";
+
 export const metadata: Metadata = {
-  title: "BonfaceCodes - Full-Stack Developer | Available for Hire",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "BonfaceCodes - Full-Stack Developer | Available for Hire",
+    template: "%s | BonfaceCodes",
+  },
   description:
-    "Hi, I'm Bonface - I build modern web & mobile apps. Turning ideas into code. Available for hire. Featured project: FreshBusket.co.ke (for sale)",
-  viewport:
-    "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
+    "Bonface is a full-stack developer from Kenya specializing in modern web and mobile applications. Expert in React, Next.js, React Native, and M-Pesa integrations. Available for hire. View portfolio including Safaricom Shop Ruaka and PhoneUp Kenya.",
   keywords: [
-    "developer",
-    "web development",
-    "mobile apps",
-    "React",
-    "Next.js",
-    "Node.js",
-    "M-Pesa",
-    "Kenya",
-    "hire developer",
-    "FreshBusket",
+    "full-stack developer",
+    "web developer Kenya",
+    "React developer",
+    "Next.js developer",
+    "React Native developer",
+    "mobile app developer",
+    "M-Pesa integration",
+    "Node.js developer",
+    "TypeScript developer",
+    "hire developer Kenya",
+    "freelance developer",
+    "web development services",
+    "e-commerce developer",
+    "business website developer",
+    "BonfaceCodes",
   ],
-  authors: [{ name: "Bonface" }],
+  authors: [{ name: "Bonface", url: siteUrl }],
   creator: "BonfaceCodes",
+  publisher: "BonfaceCodes",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "BonfaceCodes - Full-Stack Developer | Available for Hire",
     description:
-      "Hi, I'm Bonface - I build modern web & mobile apps. Turning ideas into code. Available for hire.",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://bonfacecodes.vercel.app",
+      "Full-stack developer from Kenya specializing in React, Next.js, React Native, and M-Pesa integrations. Available for hire. View my portfolio of client projects including Safaricom Shop Ruaka and PhoneUp Kenya.",
+    url: siteUrl,
     siteName: "BonfaceCodes",
     images: [
       {
-        url: "/og-image.jpg",
+        url: `${siteUrl}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "BonfaceCodes - Full-Stack Developer",
+        alt: "BonfaceCodes - Full-Stack Developer Portfolio",
       },
     ],
     locale: "en_US",
@@ -49,12 +62,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "BonfaceCodes - Full-Stack Developer | Available for Hire",
     description:
-      "Hi, I'm Bonface - I build modern web & mobile apps. Turning ideas into code. Available for hire.",
-    images: [
-      `${
-        process.env.NEXT_PUBLIC_SITE_URL || "https://bonfacecodes.vercel.app"
-      }/og-image.jpg`,
-    ],
+      "Full-stack developer from Kenya. Expert in React, Next.js, React Native, and M-Pesa integrations. Available for hire.",
+    images: [`${siteUrl}/og-image.jpg`],
+    creator: "@bonfacecodes",
   },
   robots: {
     index: true,
@@ -99,9 +109,43 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Bonface",
+    alternateName: "BonfaceCodes",
+    jobTitle: "Full-Stack Developer",
+    description:
+      "Full-stack developer from Kenya specializing in modern web and mobile applications",
+    url: siteUrl,
+    sameAs: [
+      "https://github.com/QuantumSnow0",
+      "https://linkedin.com/in/bonface-mbabu-9153a8159",
+    ],
+    knowsAbout: [
+      "Web Development",
+      "Mobile App Development",
+      "React",
+      "Next.js",
+      "React Native",
+      "Node.js",
+      "M-Pesa Integration",
+      "TypeScript",
+    ],
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "KE",
+      addressLocality: "Nairobi",
+    },
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `

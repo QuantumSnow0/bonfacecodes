@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import DarkModeHint from "@/components/DarkModeHint";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <Navbar />
+      <DarkModeHint />
       <main>
         <Hero />
         <About />

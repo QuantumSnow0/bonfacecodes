@@ -1,13 +1,15 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://bonfacecodes.vercel.app";
+  
   return {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: "/private/",
+      disallow: ["/api/", "/private/"],
     },
-    sitemap: "https://bonfacecodes.com/sitemap.xml",
+    sitemap: `${baseUrl}/sitemap.xml`,
   };
 }
 

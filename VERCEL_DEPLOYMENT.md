@@ -131,7 +131,7 @@ Add these environment variables:
 - 🎨 **Dark/Light Mode** with smooth transitions
 - 📱 **Mobile Responsive** design
 - ✉️ **Working Contact Form** with email sending
-- 🚀 **FreshBusket Project** featured with "For Sale" badge
+- 🚀 **FreshBusket Project** featured as showcase project
 - ⚡ **Fast Performance** with Next.js 15
 - 🎯 **SEO Optimized** with meta tags and sitemap
 

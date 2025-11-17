@@ -1,19 +1,32 @@
 export const projects = [
   {
     id: 1,
-    title: "FreshBusket.co.ke",
+    title: "Safaricom Shop Ruaka",
     description:
-      "FreshBusket is a production-ready e-commerce grocery delivery platform with integrated M-Pesa payments and a complete Admin Dashboard. Built with Next.js, Supabase, and TailwindCSS. Fully live and currently for sale.",
-    image: "/images/freshbusket-preview.jpg",
-    technologies: ["Next.js", "Supabase", "TailwindCSS", "M-Pesa API", "TypeScript"],
-    liveUrl: "https://freshbusket.co.ke",
+      "A professional business website for an authorized Safaricom dealer in Ruaka. Features service showcases including Lipa Mdogo Mdogo payment solutions, Safaricom routers, premium smartphones, and comprehensive customer care services. Built with modern design principles and fully responsive.",
+    image: "/images/safaricom-shop-preview.jpg",
+    technologies: ["Next.js", "React", "TailwindCSS", "TypeScript", "Responsive Design"],
+    liveUrl: "https://www.safaricomshopruaka.co.ke",
     githubUrl: null,
-    forSale: true,
+    forSale: false,
     featured: true,
-    category: "E-commerce",
+    category: "Business Website",
   },
   {
     id: 2,
+    title: "PhoneUp Kenya",
+    description:
+      "A full-featured e-commerce platform for smartphones and mobile accessories. Features product catalog with multiple brands (Samsung, Apple, Infinix, Tecno, Xiaomi), shopping cart functionality, category filtering, and nationwide delivery. Modern UI with seamless shopping experience.",
+    image: "/images/phoneup-preview.jpg",
+    technologies: ["Next.js", "E-commerce", "TailwindCSS", "TypeScript", "Payment Integration"],
+    liveUrl: "https://www.phoneupkenya.co.ke",
+    githubUrl: null,
+    forSale: false,
+    featured: false,
+    category: "E-commerce",
+  },
+  {
+    id: 3,
     title: "Modern Calculator App",
     description:
       "A sleek, modern calculator application built with vanilla JavaScript featuring a clean UI, smooth animations, and advanced mathematical operations. Perfect for daily calculations with a beautiful dark mode.",
@@ -26,7 +39,7 @@ export const projects = [
     category: "Web App",
   },
   {
-    id: 3,
+    id: 4,
     title: "Weather Dashboard",
     description:
       "A responsive weather application built with Next.js that fetches real-time weather data from external APIs. Features location-based forecasts, beautiful UI, and detailed weather information.",
@@ -39,7 +52,7 @@ export const projects = [
     category: "Web App",
   },
   {
-    id: 4,
+    id: 5,
     title: "Kinyozi Booking App",
     description:
       "A comprehensive mobile app for booking barbershop appointments with integrated maps, real-time availability, and seamless payment processing. Built for both iOS and Android platforms.",
@@ -52,7 +65,7 @@ export const projects = [
     category: "Mobile App",
   },
   {
-    id: 5,
+    id: 6,
     title: "Hotel Inventory System",
     description:
       "A comprehensive inventory management system for hotels built with React Native and Express backend. Features real-time stock tracking, automated alerts, and detailed reporting dashboards.",
@@ -65,7 +78,7 @@ export const projects = [
     category: "Mobile App",
   },
   {
-    id: 6,
+    id: 7,
     title: "Mitumba Marketplace",
     description:
       "An e-commerce platform for second-hand clothing with advanced image upload, secure payment processing, and seller management. Features user authentication, product search, and order tracking.",
@@ -78,7 +91,7 @@ export const projects = [
     category: "E-commerce",
   },
   {
-    id: 7,
+    id: 8,
     title: "IoT Automation Projects",
     description:
       "Various Internet of Things projects using Arduino microcontrollers for home automation, environmental monitoring, and smart device control. Includes sensor integration and remote monitoring capabilities.",

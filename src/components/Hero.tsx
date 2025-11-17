@@ -47,7 +47,7 @@ export default function Hero() {
             Turning ideas into code. Building modern web & mobile applications.
             <br />
             <span className="text-blue-600 dark:text-blue-400 font-semibold">
-              Available for hire • FreshBusket for sale
+              Available for hire
             </span>
           </motion.p>
 

@@ -24,6 +24,8 @@ export default function Projects() {
     switch (category) {
       case "E-commerce":
         return ShoppingCart;
+      case "Business Website":
+        return Globe;
       case "Web App":
         return Globe;
       case "Mobile App":
@@ -36,7 +38,6 @@ export default function Projects() {
   };
 
   const featuredProject = projects.find((project) => project.featured);
-  const otherProjects = projects.filter((project) => !project.featured);
 
   return (
     <section id="projects" className="py-20 bg-white dark:bg-gray-900">
@@ -48,7 +49,7 @@ export default function Projects() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Featured Projects
+            My Projects
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-4"></div>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -57,7 +58,7 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        {/* Featured Project - FreshBusket */}
+        {/* Featured Project */}
         {featuredProject && (
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -66,14 +67,14 @@ export default function Projects() {
             className="mb-16"
           >
             <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-2xl p-8 border border-green-200 dark:border-green-800 relative overflow-hidden">
-              {/* For Sale Badge */}
+              {/* Featured Badge */}
               <motion.div
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
-                className="absolute top-6 right-6 bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold flex items-center space-x-2 shadow-lg"
+                className="absolute top-6 right-6 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold flex items-center space-x-2 shadow-lg"
               >
-                <span>🚀</span>
-                <span>For Sale</span>
+                <span>⭐</span>
+                <span>Featured Project</span>
               </motion.div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -116,28 +117,19 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05, y: -2 }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+                      className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
                     >
                       <ExternalLink size={20} />
-                      <span>Live Demo</span>
+                      <span>View Live Site</span>
                     </motion.a>
                     <motion.button
                       whileHover={{ scale: 1.05, y: -2 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={() => scrollToSection("#contact")}
-                      className="border-2 border-green-600 text-green-600 dark:text-green-400 hover:bg-green-600 hover:text-white dark:hover:bg-green-600 px-6 py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center space-x-2"
+                      className="border-2 border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 px-6 py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center space-x-2"
                     >
                       <Code size={20} />
                       <span>Hire Me to Build Yours</span>
-                    </motion.button>
-                    <motion.button
-                      whileHover={{ scale: 1.05, y: -2 }}
-                      whileTap={{ scale: 0.95 }}
-                      onClick={() => scrollToSection("#contact")}
-                      className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
-                    >
-                      <ShoppingCart size={20} />
-                      <span>Contact to Buy</span>
                     </motion.button>
                   </div>
                 </div>
@@ -155,7 +147,7 @@ export default function Projects() {
                           <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                         </div>
                         <div className="flex-1 bg-white dark:bg-gray-800 rounded px-3 py-1 text-xs text-gray-600 dark:text-gray-400">
-                          freshbusket.co.ke
+                          {featuredProject?.liveUrl ? new URL(featuredProject.liveUrl).hostname : 'project-demo.com'}
                         </div>
                       </div>
 
@@ -210,18 +202,15 @@ export default function Projects() {
           </motion.div>
         )}
 
-        {/* Other Projects Grid */}
+        {/* Projects Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-            Other Projects
-          </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {otherProjects.map((project, index) => {
+            {projects.map((project, index) => {
               const CategoryIcon = getCategoryIcon(project.category);
               return (
                 <motion.div
@@ -243,11 +232,6 @@ export default function Projects() {
                         {project.category}
                       </span>
                     </div>
-                    {project.forSale && (
-                      <span className="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs font-bold px-2 py-1 rounded-full">
-                        For Sale
-                      </span>
-                    )}
                   </div>
 
                   {/* Project Title */}

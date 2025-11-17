@@ -1,6 +1,6 @@
 # BonfaceCodes Portfolio Website
 
-A modern, responsive portfolio website built with Next.js, TailwindCSS, and Framer Motion. This website showcases my development skills and highlights FreshBusket.co.ke as a featured project for sale.
+A modern, responsive portfolio website built with Next.js, TailwindCSS, and Framer Motion. This website showcases my development skills and highlights FreshBusket.co.ke as a featured project.
 
 ## 🚀 Features
 
@@ -10,7 +10,7 @@ A modern, responsive portfolio website built with Next.js, TailwindCSS, and Fram
 - **SEO Optimized**: Meta tags, Open Graph, sitemap, and robots.txt
 - **Smooth Animations**: Framer Motion animations throughout the site
 - **Contact Form**: Functional contact form with validation
-- **Project Showcase**: Featured FreshBusket project with "For Sale" badge
+- **Project Showcase**: Featured FreshBusket project and other completed works
 - **Skills Display**: Interactive skills section with proficiency levels
 
 ## 🛠️ Tech Stack

@@ -127,8 +127,8 @@ export default function HireMe() {
                 Ready to Start Your Project?
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Whether you need a complete web application, mobile app, or want
-                to buy FreshBusket, I'm here to help bring your vision to life.
+                Whether you need a complete web application, mobile app, or custom
+                solution, I'm here to help bring your vision to life.
               </p>
 
               <div className="space-y-4">
@@ -141,20 +141,6 @@ export default function HireMe() {
                   Work With Me
                 </motion.button>
 
-                <div className="text-center">
-                  <span className="text-gray-500 dark:text-gray-400 text-sm">
-                    or
-                  </span>
-                </div>
-
-                <motion.button
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => scrollToSection("#contact")}
-                  className="w-full border-2 border-green-600 text-green-600 dark:text-green-400 hover:bg-green-600 hover:text-white dark:hover:bg-green-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200"
-                >
-                  Buy FreshBusket
-                </motion.button>
               </div>
             </div>
 
