@@ -1,23 +1,21 @@
 "use client";
 
 import Script from "next/script";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 const GA_MEASUREMENT_ID = "G-B7BZL0TDTB";
 
 export default function GoogleAnalytics() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
     if (typeof window !== "undefined" && window.gtag) {
-      const url = pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : "");
       window.gtag("config", GA_MEASUREMENT_ID, {
-        page_path: url,
+        page_path: pathname,
       });
     }
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   return (
     <>
