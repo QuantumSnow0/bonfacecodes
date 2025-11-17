@@ -44,7 +44,11 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
           >
-            Turning ideas into code. Available for hire.
+            Turning ideas into code. Building modern web & mobile applications.
+            <br />
+            <span className="text-blue-600 dark:text-blue-400 font-semibold">
+              Available for hire • FreshBusket for sale
+            </span>
           </motion.p>
 
           {/* CTA Buttons */}

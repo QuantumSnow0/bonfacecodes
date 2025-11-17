@@ -5,7 +5,7 @@ export const projects = [
     description:
       "FreshBusket is a production-ready e-commerce grocery delivery platform with integrated M-Pesa payments and a complete Admin Dashboard. Built with Next.js, Supabase, and TailwindCSS. Fully live and currently for sale.",
     image: "/images/freshbusket-preview.jpg",
-    technologies: ["Next.js", "Supabase", "TailwindCSS", "M-Pesa API"],
+    technologies: ["Next.js", "Supabase", "TailwindCSS", "M-Pesa API", "TypeScript"],
     liveUrl: "https://freshbusket.co.ke",
     githubUrl: null,
     forSale: true,
@@ -14,11 +14,11 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Calculator App",
+    title: "Modern Calculator App",
     description:
-      "A modern calculator application built with vanilla JavaScript featuring a clean UI and smooth animations.",
+      "A sleek, modern calculator application built with vanilla JavaScript featuring a clean UI, smooth animations, and advanced mathematical operations. Perfect for daily calculations with a beautiful dark mode.",
     image: "/images/calculator-preview.jpg",
-    technologies: ["JavaScript", "HTML", "CSS"],
+    technologies: ["JavaScript", "HTML5", "CSS3", "Responsive Design"],
     liveUrl: "#",
     githubUrl: "#",
     forSale: false,
@@ -27,11 +27,11 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Weather Website",
+    title: "Weather Dashboard",
     description:
-      "A responsive weather application built with Next.js that fetches real-time weather data from external APIs.",
+      "A responsive weather application built with Next.js that fetches real-time weather data from external APIs. Features location-based forecasts, beautiful UI, and detailed weather information.",
     image: "/images/weather-preview.jpg",
-    technologies: ["Next.js", "API Integration", "TailwindCSS"],
+    technologies: ["Next.js", "Weather API", "TailwindCSS", "TypeScript"],
     liveUrl: "#",
     githubUrl: "#",
     forSale: false,
@@ -42,9 +42,9 @@ export const projects = [
     id: 4,
     title: "Kinyozi Booking App",
     description:
-      "A mobile app for booking barbershop appointments with integrated maps and payment processing.",
+      "A comprehensive mobile app for booking barbershop appointments with integrated maps, real-time availability, and seamless payment processing. Built for both iOS and Android platforms.",
     image: "/images/kinyozi-preview.jpg",
-    technologies: ["React Native", "Maps API", "Payment Integration"],
+    technologies: ["React Native", "Google Maps API", "M-Pesa Integration", "Firebase"],
     liveUrl: "#",
     githubUrl: "#",
     forSale: false,
@@ -53,11 +53,11 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Hotel Stock-Keeping App",
+    title: "Hotel Inventory System",
     description:
-      "A comprehensive inventory management system for hotels built with React Native and Express backend.",
+      "A comprehensive inventory management system for hotels built with React Native and Express backend. Features real-time stock tracking, automated alerts, and detailed reporting dashboards.",
     image: "/images/hotel-stock-preview.jpg",
-    technologies: ["React Native", "Express", "MongoDB"],
+    technologies: ["React Native", "Express.js", "MongoDB", "REST APIs"],
     liveUrl: "#",
     githubUrl: "#",
     forSale: false,
@@ -66,11 +66,11 @@ export const projects = [
   },
   {
     id: 6,
-    title: "Mitumba Online Store",
+    title: "Mitumba Marketplace",
     description:
-      "An e-commerce platform for second-hand clothing with image upload and payment processing.",
+      "An e-commerce platform for second-hand clothing with advanced image upload, secure payment processing, and seller management. Features user authentication, product search, and order tracking.",
     image: "/images/mitumba-preview.jpg",
-    technologies: ["Express", "MongoDB", "Cloudinary"],
+    technologies: ["Express.js", "MongoDB", "Cloudinary", "M-Pesa API", "JWT"],
     liveUrl: "#",
     githubUrl: "#",
     forSale: false,
@@ -79,11 +79,11 @@ export const projects = [
   },
   {
     id: 7,
-    title: "IoT Arduino Projects",
+    title: "IoT Automation Projects",
     description:
-      "Various Internet of Things projects using Arduino microcontrollers for automation and monitoring.",
+      "Various Internet of Things projects using Arduino microcontrollers for home automation, environmental monitoring, and smart device control. Includes sensor integration and remote monitoring capabilities.",
     image: "/images/arduino-preview.jpg",
-    technologies: ["Arduino", "C++", "IoT", "Sensors"],
+    technologies: ["Arduino", "C++", "IoT", "Sensors", "WiFi Modules"],
     liveUrl: "#",
     githubUrl: "#",
     forSale: false,
