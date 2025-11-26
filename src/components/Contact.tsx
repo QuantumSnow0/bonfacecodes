@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   Mail,
@@ -26,6 +26,15 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [submitStatus, setSubmitStatus] = useState<string | null>(null);
+
+  // Track Google Ads conversion when form is successfully submitted
+  useEffect(() => {
+    if (submitStatus === "success" && typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", "ads_conversion_Contact_1", {
+        // Conversion tracking for contact form submissions
+      });
+    }
+  }, [submitStatus]);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
