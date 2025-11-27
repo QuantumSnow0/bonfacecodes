@@ -15,6 +15,7 @@ import {
 interface FormData {
   name: string;
   email: string;
+  phone: string;
   message: string;
 }
 
@@ -22,6 +23,7 @@ export default function Contact() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
@@ -61,7 +63,7 @@ export default function Contact() {
 
       if (response.ok) {
         setSubmitStatus('success');
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: '', email: '', phone: '', message: '' });
       } else {
         setSubmitStatus('error');
       }
@@ -179,6 +181,24 @@ export default function Contact() {
                   required
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors duration-200"
                   placeholder="your.email@example.com"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                >
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors duration-200"
+                  placeholder="+254 700 000 000"
                 />
               </div>
 

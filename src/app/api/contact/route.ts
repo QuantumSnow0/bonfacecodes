@@ -3,12 +3,12 @@ import nodemailer from "nodemailer";
 
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, message } = await request.json();
+    const { name, email, phone, message } = await request.json();
 
     // Validate the input
     if (!name || !email || !message) {
       return NextResponse.json(
-        { error: "All fields are required" },
+        { error: "Name, email, and message are required" },
         { status: 400 }
       );
     }
@@ -37,6 +37,7 @@ export async function POST(request: NextRequest) {
             <h3 style="color: #1e40af; margin-top: 0;">Contact Details:</h3>
             <p><strong>Name:</strong> ${name}</p>
             <p><strong>Email:</strong> ${email}</p>
+            ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ''}
             <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
           </div>
           
@@ -60,6 +61,7 @@ export async function POST(request: NextRequest) {
         
         Name: ${name}
         Email: ${email}
+        ${phone ? `Phone: ${phone}` : ''}
         Date: ${new Date().toLocaleString()}
         
         Message:
